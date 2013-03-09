@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>SPOILER ALERT!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="spoiler.js"></script>
+<script>
+  $(function() {
+    $('spoiler').spoilerAlert()
+    $('.spoiler').spoilerAlert({max: 20, partial: 6})
+  })
+  </script>
+</head>
+<body>
+<p><a href="../index.html">Topに戻る</a></p>
+
+Spoilerのテストです。
+<spoiler>ここを消したい。</spoiler>
+<p>
+<img class="spoiler" src="sample.jpg" style="cursor: pointer; " title="Click to reveal completely">
+</p>
+</body>
