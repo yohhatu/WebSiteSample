@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>counter-increment2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".divCount").click(function(){
+		window.location=$("h4 a",this).attr("href");
+	});
+});
+
+</script>
+
+<style>
+p{
+	margin: 0;
+	padding: 15px;
+	font-size: 15px;
+	line-height: 150%;
+}
+
+a:link, a:visited{
+	color: #0A6363;
+	text-decoration: none;
+}
+
+a:active, a:hover{
+	color: #b50;
+}
+
+h4{
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+.divCount{
+	display: block;
+	position: relative;
+	width: 400px;
+	margin: 30px;
+	padding: 20px;
+	border-radius: 5px;
+	background: #b3e0f2;
+	counter-increment: divCount;
+	cursor: pointer;
+}
+
+.divCount:hover{
+	background: #b4cb8a;
+}
+
+.divCount:hover a{
+	background: #b50;
+}
+
+.divCount p{
+	position: relative;
+	z-index: 100;
+}
+
+.divCount:before{
+	position: absolute;
+	z-index: 10;
+	right: 20px;
+	bottom: 0;
+	color: #d0ecf7;
+	font: bold 128px/1 'Luckiest Guy', cursive;
+	text-align: center;
+	content: counter(divCount);
+}
+
+.divCount:hover:before{
+	color: #cadbad;
+}
+</style>
+
+</head>
+<body>
+<p><a href="../index.html">Topに戻る</a></p>
+<div class="divCount">
+  <h4><a href="#">タイトル1</a></h4>
+  <p>開発プロセスは(弊社のほとんどのPJで採用されているウォーターフォールでなく)、いくつかの機能群でグルーピングし、それらの完成を1つのイテレーションとする反復形式のプロセスでした。
+</p>
+</div>
+<div class="divCount">
+  <h4><a href="#">タイトル2</a></h4>
+  <p>WBSの1つを1チケットとし、進捗管理をチケットレベルで行いました。
+　ただし、お客様やマネージャーとの共有のため、大/中日程レベルの進捗管理はExcelのガントチャートとして存在していました。
+</p>
+</div>
+<div class="divCount">
+  <h4><a href="#">タイトル3</a></h4>
+  <p>：チケット1つがWBS1つだったため、粒度が大きすぎたチケットがありました。
+　結果、そのチケットのアクティブな期間が長くなり「いつ終わる」「どうなっている？」ということが、チケット上で見えにくいことが何度かありました。
+</p>
+</div>
+<div class="divCount">
+  <h4><a href="#">タイトル4</a></h4>
+  <p>Xプロジェクトでの運用をベースにし、課題などを改善して、使っていきました。
+1：チケットは(WBSレベルより)細かく、最大でも2.5時間程度に分割して作成しました。
+　ガントチャートはマイルストーンのみを表記したレベルで簡略化しお客様と共有しました。</p>
+</div>
+<div class="divCount">
+  <h4><a href="#">タイトル5</a></h4>
+  <p>チケットの登録はメンバー全員ができ、また、やりたいチケットを(自分で)アサインする方式にしたので、(ある程度は)「自律的なチーム」になりました。
+　ここでは言い出しっぺが損をしない工夫をしました。</p>
+</div></body>
