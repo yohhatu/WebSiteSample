@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>growing-input-fields</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+.forwrap {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.forwrap label{
+	display: inline-block;
+	width: 80px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #444;
+	font-family: Arial, Tahoma, sans-serif; 
+}
+
+.forwrap .shadowfield {
+	position: relative;
+	width: 250px;
+	font-size: 17px;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	background: #f7f8f8;
+	color: #7c7c7c;
+	line-height: 1.4;
+	padding: 6px 12px;
+	outline: none;
+	transition: all 0.2s ease-in-out 0s;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	-moz-transition: all 0.2s ease-in-out 0s;
+	border: 1px solid #ad9c9c;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0 1px rgba(34, 25, 25. 0.2) inset, 0 1px #fff;
+}
+
+.forwrap .shadowfield:focus{
+	border-color: #930;
+	background: #fff;
+	color: #5d5d5d;
+	box-shadow: inset 0 1px rgba(34, 25, 25, 0.2), 0 1px rgba(255, 255, 255, 0.6), 0 0 7px rgba(235, 82, 82, 0.5); 
+	-moz-box-shadow: inset 0 1px rgba(34, 25, 25, 0.2), 0 1px rgba(255, 255, 255, 0.6), 0 0 7px rgba(235, 82, 82, 0.5); 
+	-webkit-box-shadow: inset 0 1px rgba(34, 25, 25, 0.2), 0 1px rgba(255, 255, 255, 0.6), 0 0 7px rgba(235, 82, 82, 0.5);
+}
+</style>
+
+</head>
+<body>
+<p><a href="../index.html">Topに戻る</a></p>
+<div class="forwrap">
+	<label for="email">Email</label>
+	<input type="text" name="email" id="email" placeholder="Emailを入力してください" class="shadowfield">
+</div>
+<div class="forwrap">
+	<label for="password">Password</label>
+	<input type="password" name="password" id="password" placeholder="Passwordを入力してください" class="shadowfield">
+</div>
+</body>
