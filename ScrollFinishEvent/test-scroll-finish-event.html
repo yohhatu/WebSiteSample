@@ -2,9 +2,6 @@
 <head>
 <title>ScrollFinishEvent</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script>
-
-</script>
 
 <style type="text/css">
 * {
@@ -33,13 +30,30 @@ body {
 	height: 1000px;
 }
 </style>
-
-
-
 </head>
 <body>
 <div id="title"><a href="../index.html">Topに戻る</a></div>
 <div id="scrollElement">
 	<div></div>
 </div>
+
+<script type="text/javascript">
+var elm = document.getElementById('scrollElement');
+var height = elm.offsetHeight;
+
+elm.onscroll = function() {
+	var scrollHeight = elm.scrollHeight;
+	var scrollTop = elm.scrollTop;
+
+	var scrollPosition = height + scrollTop;
+
+ 	var proximity = 0;
+
+ 	if ((scrollHeight - scrollPosition) / scrollHeight <= proximity)
+ 		alert('スクロール終了');
+ 		elm.appendChild(document.createElement('div'));
+ }
+
+</script>
+
 </body>
