@@ -8,12 +8,15 @@
 </style>
 <script type="text/javascript">
 $(function() {
-	$(window).on('beforeunload', function() {
-		return 'このまま移動しますか？';
+	$("input[type=text]").change(function() {
+		$(window).on('beforeunload', function() {
+			return 'このまま移動しますか？';
+		});
 	});
 	$("input[type=submit]").click(function() {
 		$(window).off('beforeunload');
 	});
+
 });
 </script>
 
