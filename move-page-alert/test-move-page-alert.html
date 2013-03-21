@@ -11,6 +11,9 @@ $(function() {
 	$(window).on('beforeunload', function() {
 		return 'このまま移動しますか？';
 	});
+	$("input[type=submit]").click(function() {
+		$(window).off('beforeunload');
+	});
 });
 </script>
 
