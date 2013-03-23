@@ -3,6 +3,41 @@
 <title>negative-margin</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
+#container {
+	margin: auto;
+	width: 100%;
+}
+
+#main {
+	float: left;
+	margin-right: -340px;
+	width: 100%;
+}
+
+#content {
+	float: right;
+	margin: 20px 0 20px -210px;
+	width: 100%
+}
+
+#content_inner {
+	margin-left: 210px;
+	margin-right: 340px;
+}
+
+#leftside{
+	float: left;
+	margin: 20px 0;
+	padding-left: 20px;
+	width: 170px;
+}
+
+#rightside{
+	float: right;
+	margin: 20px 0;
+	padding-right: 20px;
+	width: 300px;
+}
 </style>
 <script type="text/javascript">
 </script>
@@ -10,4 +45,19 @@
 </head>
 <body>
 <div id="title"><a href="../index.html">Topに戻る</a></div>
+<div id="container">
+	<div id="main">
+		<div id="content">
+		<section id="content_inner" class="clearfix">
+			content_inner
+		</section>
+		<section id="leftside" class="clearfix">
+			leftside
+		</section>
+	</div>
+	</div>
+<section id="rightside" class="clearfix">
+	rightside
+</section>
+</div>
 </body>
