@@ -2,8 +2,14 @@
 <head>
 <title>jquey-ui-sample</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
+<script type="text/javascript">
+$(function() {
+	$("#text_name").val("入力してください").css("color", "#ccc").focus(function(){
+		$(this).val("").css("color", "#000")
+	});
+})
 </script>
 
 <style type="text/css">
@@ -13,4 +19,6 @@
 </head>
 <body>
 	<a href="../index.html">Topに戻る</a>
+	<p>
+	<label　id="label_name">お名前:</label><input type="text" id="text_name">
 </body>
