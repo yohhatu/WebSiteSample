@@ -8,12 +8,13 @@
 $(function() {
 	$("#text_name").val("入力してください").css("color", "#ccc").one("focus", function() { 
 			$(this).val("").css("color", "#000");
-		}).blur(
+		});
+
+	$("#text_name").blur(
 		function() {
 			if ($(this).val() == "") {
 				$(this).val("入力してください").css("color", "#ccc")
-				.one("focus", 
-				function() {
+				.one("focus", function() {
 					$(this).val("").css("color", "#000");
 				})
 			}	 
