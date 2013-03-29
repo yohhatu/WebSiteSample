@@ -18,7 +18,12 @@ $(function() {
 					$(this).val("").css("color", "#000");
 				})
 			}	 
-	});
+		});
+
+	$("#select_proposal").change(
+		function() {
+			$("#label_selected_proposal").text($(this).val());
+		});
 })
 </script>
 
@@ -31,4 +36,11 @@ $(function() {
 	<a href="../index.html">Topに戻る</a>
 	<p>
 	<label　id="label_name">お名前:</label><input type="text" id="text_name">
+	<p>
+	<label　id="label_proposal">お申し込み者:
+		<select id="select_proposal">
+			<option value="お名前">個人</option>
+			<option value="会社名">法人</option>
+		</select>
+		<p><span id="label_selected_proposal">お名前</span><input type="text" id="text_proposal">
 </body>
