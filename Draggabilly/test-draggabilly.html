@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>sub-navigation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../Draggabilly/js/draggabilly.pkgd.js"></script>
+<script>
+docReady( function() {
+	'use strict';
+
+	var Draggabilly = window.Draggabilly;
+
+	( function() {
+		var elem = document.querySelector('#basic');
+		new Draggabilly(elem);
+	})();
+});
+</script>
+
+<style type="text/css">
+/* draggabillies
+------------------------- */
+
+.draggie {
+  width:  150px;
+  height: 150px;
+  background: #FA0;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.draggie.is-dragging {
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.draggie.is-dragging,
+.draggie:hover,
+#has-handle .handle:hover {
+  cursor: move;
+  background: #0AF;
+}
+
+</style>
+
+</head>
+<body>
+<a href="../index.html">Topに戻る</a>
+<div id="basic" class="draggie" style="position: relative; left: 178px; top: 106px; "></div>
+</body>
